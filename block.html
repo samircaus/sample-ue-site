@@ -4,7 +4,7 @@
     <title>Block</title>
     <link rel="stylesheet" href="styles.css">
     <meta name="urn:adobe:aem:editor:aemconnection" content="aem:https://localhost:4502">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adobe/universal-editor-cors/dist/universal-editor-embedded.js">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adobe/universal-editor-cors/dist/universal-editor-embedded.js"></script>
     <script type="application/vnd.adobe.aem.editor.component-definition+json">
         {
             "groups": [
@@ -13,18 +13,18 @@
                 "id": "general",
                 "components": [
                   {
-                    "title": "Block",
+                    "title": "Logo Cloud",
                     "icon": "Text",
-                    "id": "block",
+                    "id": "logo-cloud",
                     "model": {
-                      "id": "text",
+                      "id": "logo-cloud",
                       "fields": [
                         {                
-                         "component": "text-input",
-                         "name": "a1",
-                         "value": "A1 Default Value",
-                         "label": "A1",
-                         "valueType": "string",
+                         "component": "text-area",
+                         "name": "text",
+                         "value": "Title & Description",
+                         "label": "Text",
+                         "valueType": "string"
                         }
                       ]
                     }
@@ -38,20 +38,23 @@
 
 <body>
     <main>
-        <table itemscope itemid="urn:aemconnection:/content/example/block" itemtype="component" data-editor-itemmodel="block">
+        <table itemscope itemid="urn:aemconnection:/content/foobar/jcr:content/block" itemtype="container" data-editor-behaviour="true" data-editor-itemmodel="logo-cloud">
             <thead>
                 <tr>
-                    <th colspan="2">Block</th>
+                    <th colspan="2">Block-Container</th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td>A1</td>
-                    <td>B1</td>
+                    <td colspan="2"><p>Lorem Ipsum Rich Text</p></td>
                 </tr>
                 <tr>
-                    <td>A2</td>
-                    <td>B2</td>
+                    <td><img src="https://fastly.picsum.photos/id/155/200/300.jpg?hmac=nG5WHfEXcJmld5FbH0N9bGciE9a57S0bgIHHTpxag7o"></td>
+                    <td>Lorem Ipsum 1</td>
+                </tr>
+                <tr>
+                    <td><img src="https://fastly.picsum.photos/id/155/200/300.jpg?hmac=nG5WHfEXcJmld5FbH0N9bGciE9a57S0bgIHHTpxag7o"></td>
+                    <td>Lorem Ipsum 2</td>
                 </tr>
             </tbody>
         </table>
