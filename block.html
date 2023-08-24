@@ -1,0 +1,60 @@
+<html>
+
+<head>
+    <title>Block</title>
+    <link rel="stylesheet" href="styles.css">
+    <meta name="urn:adobe:aem:editor:aemconnection" content="aem:https://localhost:4502">
+    <script type="application/vnd.adobe.aem.editor.component-definition+json">
+        {
+            "groups": [
+              {
+                "title": "General Components",
+                "id": "general",
+                "components": [
+                  {
+                    "title": "Block",
+                    "icon": "Text",
+                    "id": "block",
+                    "model": {
+                      "id": "text",
+                      "fields": [
+                        {                
+                         "component": "text-input",
+                         "name": "a1",
+                         "value": "A1 Default Value",
+                         "label": "A1",
+                         "valueType": "string",
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+    </script>
+</head>
+
+<body>
+    <main>
+        <table itemscope itemid="urn:aemconnection:/content/example/block" itemtype="component" data-editor-itemmodel="block">
+            <thead>
+                <tr>
+                    <th colspan="2">Block</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>A1</td>
+                    <td>B1</td>
+                </tr>
+                <tr>
+                    <td>A2</td>
+                    <td>B2</td>
+                </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>
