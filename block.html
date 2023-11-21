@@ -6,34 +6,59 @@
     <meta name="urn:adobe:aem:editor:aemconnection" content="aem:https://localhost:4502">
     <meta name="urn:adobe:aue:system:fcsconnection" content="fcs:https://example.franklin.adobe.com/345fcdd">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/gh/adobe/universal-editor-cors/dist/universal-editor-embedded.js"></script>
+    <script type="application/vnd.adobe.aue.component+json">
+  
+    </script>
+    <script type="application/vnd.adobe.aue.model+json" src="/static/model-definition.json">
+  
+    </script>
     <script type="application/vnd.adobe.aem.editor.component-definition+json">
-        {
-            "groups": [
-              {
-                "title": "General Components",
-                "id": "general",
-                "components": [
-                  {
-                    "title": "Logo Cloud",
-                    "icon": "Text",
-                    "id": "logo-cloud",
-                    "model": {
-                      "id": "logo-cloud",
-                      "fields": [
-                        {                
-                         "component": "text-area",
-                         "name": "text",
-                         "value": "Title & Description",
-                         "label": "Text",
-                         "valueType": "string"
-                        }
-                      ]
-                    }
-                  }
-                ]
-              }
+      [
+      {
+        "id": "text",
+        "fields": [
+          {
+            "component": "text-input",
+            "name": "text",
+            "value": "Text",
+            "label": "Custom Text",
+            "valueType": "string"
+          }
+        ]
+      },
+      {
+        "id": "title",
+        "fields": [
+          {
+            "component": "select",
+            "name": "type",
+            "value": "h1",
+            "label": "Type",
+            "valueType": "string",
+            "options": [
+              { "name": "h1", "value": "h1" },
+              { "name": "h2", "value": "h2" },
+              { "name": "h3", "value": "h3" },
+              { "name": "h4", "value": "h4" },
+              { "name": "h5", "value": "h5" },
+              { "name": "h6", "value": "h6" }
             ]
           }
+        ]
+      },
+      {
+        "id": "richtext",
+        "fields": [
+          {
+            "component": "text-area",
+            "name": "text",
+            "value": "Text",
+            "label": "Custom Richtext",
+            "valueType": "string"
+          }
+        ]
+      }
+    ]
     </script>
 </head>
 
